@@ -1,0 +1,41 @@
+//Voting System
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int option1 = 0, option2 = 0;
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("\nVote for your favorite option:");
+            System.out.println("1. Option 1");
+            System.out.println("2. Option 2");
+            System.out.println("3. View Results");
+            System.out.println("4. Exit");
+            System.out.print("Your vote: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    option1++;
+                    System.out.println("You voted for Option 1");
+                    break;
+                case 2:
+                    option2++;
+                    System.out.println("You voted for Option 2");
+                    break;
+                case 3:
+                    System.out.println("Results: ");
+                    System.out.println("Option 1: " + option1 + " votes");
+                    System.out.println("Option 2: " + option2 + " votes");
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        } while (choice != 4);
+    }
+}
